@@ -62,7 +62,6 @@ main{
     justify-content: space-between;
     background-color:#e0e0e0;
     padding: 15px;
-    border-bottom: 1px solid gray;
 }
 
 .contatti-profilo{
@@ -93,14 +92,10 @@ main{
     display: flex;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid gray;
-    background-color:#e0e0e0;
-    transition: 0.3s;
-}
-
-.contatti-notifiche:hover{
     background-color: lightskyblue;
 }
+
+
 
 .contatti-notifiche i{
     background-color: white;
@@ -210,7 +205,6 @@ main{
     align-items: center;
     padding: 15px;
     background-color: #e0e0e0;
-    border-bottom: 1px solid gray;
 }
 
 .immagine-utente{
@@ -254,11 +248,48 @@ main{
     background-image: url(../img/mine.jpg);
 }
 
+.messaggio{
+    position: relative;
+    margin: 30px 0px;
+    left: 50px;
+    width: 50%;
+    padding: 10px;
+    background-color: red;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.messaggio.inviato{
+    background-color:#dcf8c6;
+}
+
+.margin-left{
+    margin-left: 50px;
+}
+
+.messaggio.ricevuto{
+    background-color:white ;
+}
+
+
+
+.orario-messaggio{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 10px;
+    color: gray;
+
+}
+
+
+
 
 /* selettore di debug per verificare il funzionamento dello scroll */
-.messaggi > p{
+/* .messaggi > p{
     margin: 150px 0px;
-}
+} */
 
 
 /* stile della barra input dove inseriamo i messaggi */
@@ -267,7 +298,6 @@ main{
     align-items: center;
     padding: 17px;
     background-color: #e0e0e0;
-    border-top: 1px solid gray;
 }
 
 .input-chat input{
