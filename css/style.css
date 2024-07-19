@@ -9,7 +9,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/* stile header */
 header{
     display: flex;
     align-items: center;
@@ -20,14 +20,18 @@ header{
     z-index: 1;
 }
 
+/* stile main */
 main{
     height: calc(100vh - 100px);
-    background-color: rgb(150, 150, 150);
+    background-color: lightgray;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
+
+
+/* contenitore principale centrato */
 .contenitore-principale{
     height: 100%;
     width: 80%;
@@ -45,6 +49,7 @@ main{
 .contatti{
     width: 30%;
     border-right: 1px solid lightgray;
+    overflow-y: auto;
 }
 
 .contatti ul{
@@ -67,7 +72,7 @@ ul li:last-child{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:lightgray ;
+    background-color:#e0e0e0;
     padding: 15px;
     border-bottom: 1px solid gray;
 }
@@ -89,6 +94,42 @@ ul li:last-child{
     gap: 10px;
 }
 
+/* stile contatti notifiche */
+
+.contatti-notifiche{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    background-color:#e0e0e0;
+    transition: 0.3s;
+}
+
+.contatti-notifiche:hover{
+    background-color: lightskyblue;
+}
+
+.contatti-notifiche i{
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: lightskyblue;
+    margin-right: 10px;
+}
+
+.contatti-notifiche .testo{
+    font-size: 12px;
+}
+
+.testo > .stile-testo{
+    color: gray;
+    text-decoration: underline;
+    
+}
+
+
+
 
 /* stile parte chat */
 
@@ -103,7 +144,7 @@ ul li:last-child{
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: lightgray;
+    background-color: #e0e0e0;
     border-top: 1px solid gray;
 }
 
