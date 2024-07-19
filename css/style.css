@@ -36,4 +36,17 @@ main{
     position: absolute;
     top: -40px;
     z-index: 2;
+    display: flex;
+}
+
+.contatti{
+    width: 30%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.chat{
+    width: 70%;
+    height: 100%;
+    background-color: aquamarine;
 }
