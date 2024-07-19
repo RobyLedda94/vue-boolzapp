@@ -1,5 +1,5 @@
 // debug
-alert("Questo e boolzap");
+// alert("Questo e boolzap");
 
 
 // struttura base vue.js
