@@ -147,7 +147,7 @@ main{
 .lista-contatti{
     max-height: calc((100vh - 298px));
     overflow-y: auto;
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 .lista-contatti ul{
