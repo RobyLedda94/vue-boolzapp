@@ -175,6 +175,7 @@ main{
 
 /* stile contenuto contatti */
 .contenuto-contatti{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
