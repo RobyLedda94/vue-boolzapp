@@ -15,14 +15,14 @@ header{
     align-items: center;
     height: 100px;
     padding: 0 10px;
-    background-color: green;
+    background-color:#076b5f;
     color: white;
     z-index: 1;
 }
 
 main{
     height: calc(100vh - 100px);
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(150, 150, 150);
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,7 +31,6 @@ main{
 .contenitore-principale{
     height: 100%;
     width: 80%;
-    border-radius: 10px;
     background-color: white;
     position: absolute;
     top: -40px;
@@ -39,14 +38,71 @@ main{
     display: flex;
 }
 
+
+
+/* stile parte contatti */
+
 .contatti{
     width: 30%;
-    height: 100%;
-    background-color: aqua;
+    border-right: 1px solid lightgray;
 }
+
+.contatti ul{
+    list-style: none;
+}
+
+.contatti li{
+    margin: 40px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+ul li:last-child{
+    border-bottom: none;
+}
+
+/* contatti top */
+
+.contatti-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:lightgray ;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+
+/* stile parte chat */
 
 .chat{
     width: 70%;
-    height: 100%;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-chat{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: lightgray;
+    border-top: 1px solid gray;
+}
+
+.input-chat input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.input-chat .icona{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+
+.messaggi{
+    flex: 1;
 }
