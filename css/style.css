@@ -84,6 +84,7 @@ main{
 
 .contatti-icone > i{
     color: gray;
+    cursor: pointer;
 }
 
 /* stile contatti notifiche */
@@ -202,11 +203,60 @@ main{
     flex-direction: column;
 }
 
+/* stile info utente  */
 
-.input-chat{
+.info-utente{
     display: flex;
     align-items: center;
     padding: 15px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid gray;
+}
+
+.immagine-utente{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dettagli-utente{
+    flex: 1;
+}
+
+.nome-utente{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.ultimo-accesso{
+    font-size: 12px;
+    color: gray;
+}
+
+.icone-utente i{
+    font-size: 20px;
+    color: gray;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* stile dei messaggi */
+.messaggi{
+    flex: 1;
+}
+
+
+/* stile della barra input dove inseriamo i messaggi */
+.input-chat{
+    display: flex;
+    align-items: center;
+    padding: 17px;
     background-color: #e0e0e0;
     border-top: 1px solid gray;
 }
@@ -222,9 +272,5 @@ main{
     margin: 0 10px;
     font-size: 20px;
     color: gray;
-}
-
-
-.messaggi{
-    flex: 1;
+    cursor: pointer;
 }
