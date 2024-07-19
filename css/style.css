@@ -249,6 +249,15 @@ main{
 /* stile dei messaggi */
 .messaggi{
     flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-image: url(../img/mine.jpg);
+}
+
+
+/* selettore di debug per verificare il funzionamento dello scroll */
+.messaggi > p{
+    margin: 150px 0px;
 }
 
 
