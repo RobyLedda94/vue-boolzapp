@@ -82,6 +82,10 @@ main{
     gap: 10px;
 }
 
+.contatti-icone > i{
+    color: gray;
+}
+
 /* stile contatti notifiche */
 
 .contatti-notifiche{
@@ -169,6 +173,12 @@ main{
     margin: 0 10px; 
 }
 
+/* stile contenuto contatti */
+.contenuto-contatti{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 
@@ -199,6 +209,7 @@ main{
 .input-chat .icona{
     margin: 0 10px;
     font-size: 20px;
+    color: gray;
 }
 
 
