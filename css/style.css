@@ -40,6 +40,8 @@ main{
     top: -40px;
     z-index: 2;
     display: flex;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 
@@ -264,7 +266,7 @@ main{
 }
 
 .margin-left{
-    margin-left: 50px;
+    margin-left: 30%;
 }
 
 .messaggio.ricevuto{
