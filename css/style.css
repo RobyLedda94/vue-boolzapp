@@ -128,6 +128,28 @@ ul li:last-child{
     
 }
 
+/* stile contatti ricerca */
+.contatti-ricerca{
+    display: flex;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid gray;
+}
+
+.contatti-ricerca input{
+    flex: 1;
+    padding: 5px 10px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.contatti-ricerca i{
+    font-size: 19px;
+    color: gray;
+    padding: 3px 10px;
+    background-color: whitesmoke;
+}
+
 
 
 
