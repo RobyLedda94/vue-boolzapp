@@ -9,3 +9,7 @@ In allegato trovate il pdf con il brief del progetto che abbiamo letto in classe
 1 - struttura statica del layout 
 2 - stutturare nello script l'array di oggetti
 3 - visualizazzione dinamica della lista dei contatti utilizzando la direttiva v-for
+
+<!-- MILESTONE 2 -->
+1 - definisco una variavile che tiene traccia del contatto attivo
+2 - richiamo una funzione che aggiorna il contatto selezionato

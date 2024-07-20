@@ -51,7 +51,8 @@
                     <div class="lista-contatti">
                         <ul>
                             <!-- Utilizzo la direttiva v-for per visualizzare in maniera dinamica la lista dei contatti -->
-                            <li v-for="(contact, index) in contacts" :key="index">
+                             <!-- Al click mostro il contatto attivo -->
+                            <li v-for="(contact, index) in contacts" :key="index" @click="select(index)">
                                 <img class="immagini-contatti" :src="contact.avatar" :alt="contact.name">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -63,100 +64,18 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_2.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Fabio</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_3.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Samuele</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_4.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Alessandro B.</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_5.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Alessandro L</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_6.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Claudia</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_7.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Federico</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
-                            <!-- <li>
-                                <img class="immagini-contatti" src="./img/avatar_8.jpg" alt="">                              
-                                <div class="contenuto-contatti">
-                                    <div class="testo">
-                                        <p>Davide</p>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="orario">
-                                        <p>12.00</p>
-                                    </div>
-                                </div>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
                 <!-- sezione dedicata alla chat -->
                 <div class="chat">
                     <!-- sezione info utente con il quale stiamo messaggiando -->
-                     <div class="info-utente">
-                        <img class="immagine-utente" src="./img/avatar_1.jpg" alt="">
+                     <!-- Direttiva v-for per iterare la lista dei contatti -->
+                      <!-- Operatore ternario che mostra solo il contatto attivo con binding della classe display flex -->
+                     <div class="info-utente display-none" v-for="(contact,index) in contacts" :key="index" :class="selectedContact === index ? 'display-flex' : '' ">
+                        <img class="immagine-utente" :src="contact.avatar" alt="contact.name">
                         <div class="dettagli-utente">
-                            <p class="nome-utente">Michele</p>
+                            <p class="nome-utente">{{ contact.name }}</p>
                             <p class="ultimo-accesso">Ultimo accesso: Oggi alle 12:00</p>
                         </div>
                         <div class="icone-utente">

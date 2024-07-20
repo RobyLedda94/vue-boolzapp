@@ -209,6 +209,12 @@ main{
     background-color: #e0e0e0;
 }
 
+
+/* ho integrato questa classe per nascondere i contatti che non sono attivi */
+.display-none{
+    display: none;  
+}
+
 .immagine-utente{
     width: 40px;
     height: 40px;
@@ -314,4 +320,13 @@ main{
     font-size: 20px;
     color: gray;
     cursor: pointer;
+}
+
+
+
+
+/* classi binding dinamico */
+
+.display-flex{
+    display: flex;
 }

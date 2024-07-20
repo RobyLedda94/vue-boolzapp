@@ -169,10 +169,14 @@ createApp({
                 ],
             }
 
-            ]
+            ],
+            selectedContact: 0, // variabile che traccia il contatto attivo
         };
     },
     methods: {
+        select(index) {
+            this.selectedContact = index;  // richiamo la funzione per mostrare al click il contatto attivo
+        }
 
     },
 }).mount('#app');
