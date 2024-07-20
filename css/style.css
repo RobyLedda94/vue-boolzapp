@@ -210,10 +210,7 @@ main{
 }
 
 
-/* ho integrato questa classe per nascondere i contatti che non sono attivi */
-.display-none{
-    display: none;  
-}
+
 
 .immagine-utente{
     width: 40px;
@@ -251,7 +248,7 @@ main{
 /* stile dei messaggi */
 .messaggi{
     flex: 1;
-    padding: 10px;
+    padding: 30px;
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
 }
@@ -259,20 +256,16 @@ main{
 .messaggio{
     position: relative;
     margin: 30px 0px;
-    left: 50px;
+    left: 0px;
     width: 50%;
     padding: 10px;
-    background-color: red;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .messaggio.inviato{
     background-color:#dcf8c6;
-}
-
-.margin-left{
-    margin-left: 30%;
+    margin-left: auto;
 }
 
 .messaggio.ricevuto{
@@ -326,6 +319,11 @@ main{
 
 
 /* classi binding dinamico */
+
+/* ho integrato questa classe per nascondere i contatti che non sono attivi */
+.display-none{
+    display: none;  
+}
 
 .display-flex{
     display: flex;

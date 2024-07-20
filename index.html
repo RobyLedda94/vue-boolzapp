@@ -71,8 +71,8 @@
                 <div class="chat">
                     <!-- sezione info utente con il quale stiamo messaggiando -->
                      <!-- Direttiva v-for per iterare la lista dei contatti -->
-                      <!-- Operatore ternario che mostra solo il contatto attivo con binding della classe display flex -->
-                     <div class="info-utente display-none" v-for="(contact,index) in contacts" :key="index" :class="selectedContact === index ? 'display-flex' : '' ">
+                      <!-- Operatore ternario per applicare dinamicamente una classe css in base alla condizione -->
+                     <div class="info-utente display-none" v-for="(contact,index) in contacts" :key="index" :class="selectedContact == index ? 'display-flex' : '' ">
                         <img class="immagine-utente" :src="contact.avatar" alt="contact.name">
                         <div class="dettagli-utente">
                             <p class="nome-utente">{{ contact.name }}</p>
@@ -86,44 +86,10 @@
                      </div>
                     <!-- parte dei messaggi -->
                     <div class="messaggi">
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio inviato margin-left">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio inviato margin-left">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio inviato margin-left">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio inviato margin-left">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
-                            <span class="orario-messaggio">12:00</span>
-                        </div>
-                        <div class="messaggio ricevuto">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ducimus eveniet nemo quo sapiente ut quisquam inventore odio nobis molestias quia quae saepe error iste eligendi, soluta, hic quis vel.</p>              
+                        <!-- direttiva v-for per iterare i messaggi -->
+                        <!-- Operatore ternario per applicare dinamicamente una classe css in base alla condizione -->
+                        <div v-for="(message, index) in contacts[selectedContact].messages" :key="index" :class="['messaggio', message.status == 'sent' ? 'inviato' : 'ricevuto']">
+                            <p>{{ message.message }}</p>              
                             <span class="orario-messaggio">12:00</span>
                         </div>
                     </div>
