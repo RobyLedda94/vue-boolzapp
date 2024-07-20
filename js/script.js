@@ -170,6 +170,20 @@ createApp({
             }
 
             ],
+
+            // prova per generare una lista di risposte automatiche ??
+            // risposteAuto: [
+            //     'ok',
+            //     'Ciao',
+            //     'Come stai',
+            //     'Stasera ho prenotato al Chiaro di Luna',
+            //     'Conferma la presenza per la partita di calcio',
+            //     'Proviamo a studiare assieme',
+            //     'Stiamo per andare al mare',
+            //     'Ho preparato tutto'
+            // ],
+
+
             selectedContact: 0, // variabile che traccia il contatto attivo
             newMessage: '', // variabile che tiene traccia dei nuovi messaggi
         };
@@ -190,8 +204,21 @@ createApp({
                 });
                 // pulisco il campo del messaggio dopo l'invio
                 this.newMessage ='';
+                // richiamo la funzione
+                this.autoReplay();
             }
         },
+        // set timeout arrow function per generare una risposta automatica
+        autoReplay () {
+            setTimeout(() => {
+                // tengo traccia dell'indice dei contatti e aggiungo la nuova risposta all'array dei messaggi
+                this.contacts[this.selectedContact].messages.push({
+                    message: 'ok',
+                    status: 'received',
+                });
+
+            }, 1000); // 1 secondo rappresentato in millesecondi
+        }
 
     },
 }).mount('#app');
