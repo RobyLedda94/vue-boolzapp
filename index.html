@@ -50,11 +50,12 @@
                     <!-- lista di tutti i contatti -->
                     <div class="lista-contatti">
                         <ul>
-                            <li>
-                                <img class="immagini-contatti" src="./img/avatar_1.jpg" alt="">                              
+                            <!-- Utilizzo la direttiva v-for per visualizzare in maniera dinamica la lista dei contatti -->
+                            <li v-for="(contact, index) in contacts" :key="index">
+                                <img class="immagini-contatti" :src="contact.avatar" :alt="contact.name">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
-                                        <p>Michele</p>
+                                        <p>{{ contact.name }}</p>
                                         <p>Ultimo messaggio inviato</p>
                                     </div>
                                     <div class="orario">
@@ -62,7 +63,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_2.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -73,8 +74,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_3.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -85,8 +86,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_4.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -97,8 +98,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_5.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -109,8 +110,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_6.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -121,8 +122,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_7.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -133,8 +134,8 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <img class="immagini-contatti" src="./img/avatar_8.jpg" alt="">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">
@@ -145,11 +146,11 @@
                                         <p>12.00</p>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
-                <!-- sezione dedicata alla chat da completare (statico) -->
+                <!-- sezione dedicata alla chat -->
                 <div class="chat">
                     <!-- sezione info utente con il quale stiamo messaggiando -->
                      <div class="info-utente">
@@ -217,6 +218,8 @@
             </div>
           </main>
      </div>
+        <!-- link a vue -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <!-- link allo script -->
        <script src="./js/script.js"></script>
 </body>
