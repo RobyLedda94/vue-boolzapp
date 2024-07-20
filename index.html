@@ -95,9 +95,11 @@
                     </div>
                     <!-- input della chat -->
                     <div class="input-chat">
+                        <!-- direttiva v-model per aggiungere i nuovi messaggi all'array  -->
                         <span class="icona"><i class="fa-regular fa-face-smile"></i></span>
-                        <input type="text" placeholder="Scrivi un messaggio">
-                        <span class="icona"><i class="fa-solid fa-microphone"></i></span>
+                        <input type="text" v-model="newMessage" placeholder="Scrivi un messaggio" @Keypress.enter="sendMessage" >
+                        <!-- L'icona sarà il pulsante con il quale invio un nuovo messaggio -->
+                        <span class="icona" @click="sendMessage"><i class="fa-solid fa-paper-plane"></i></span>
                     </div>
                 </div>
             </div>

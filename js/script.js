@@ -171,12 +171,27 @@ createApp({
 
             ],
             selectedContact: 0, // variabile che traccia il contatto attivo
+            newMessage: '', // variabile che tiene traccia dei nuovi messaggi
         };
     },
     methods: {
         select(index) {
             this.selectedContact = index;  // richiamo la funzione per mostrare al click il contatto attivo
-        }
+        },
+        // metodo per inviare un nuovo messaggio
+        sendMessage() {
+            // controllo se il campo messaggio non e vuoto
+            if(this.newMessage.trim() !== ''){
+                // pusch del nuovo messaggio alla lista dei messaggi
+                this.contacts[this.selectedContact].messages.push({
+                    message: this.newMessage,
+                    // stato del messaggio inviato
+                    status: 'sent',
+                });
+                // pulisco il campo del messaggio dopo l'invio
+                this.newMessage ='';
+            }
+        },
 
     },
 }).mount('#app');

@@ -130,6 +130,7 @@ main{
     flex: 1;
     padding: 5px 10px;
     border: none;
+    outline: none;
     background-color: whitesmoke;
 }
 
@@ -261,6 +262,8 @@ main{
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    overflow-wrap: break-word; /* i messaggi molto lunghi vanno a capo cosi evito che il testo esca dal proprio contenitore*/
+    
 }
 
 .messaggio.inviato{
@@ -306,6 +309,7 @@ main{
     padding: 10px;
     border-radius: 20px;
     border: none;
+    outline: none;
 }
 
 .input-chat .icona{
@@ -313,6 +317,15 @@ main{
     font-size: 20px;
     color: gray;
     cursor: pointer;
+}
+
+.fa-paper-plane {
+    transition: 0.3s;
+}
+
+i.fa-paper-plane:hover{
+    color: #076b5f;
+    transform: scale(1.3);
 }
 
 
