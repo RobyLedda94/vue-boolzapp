@@ -221,12 +221,18 @@ createApp({
             }, 1000); // 1 secondo rappresentato in millesecondi
         },
 
-        // metodo per filtrare i contatti
-        filterContact() {
-            return this.contacts.filter(contact => {
-            contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
-        });
-    }
+        // metodo per filtrare i contatti in base alla ricerca
+        filterContact () {
+            // questa condizione fa si che in caso la stringa e vuota mi restitusce tutti i contatti
+            if (this.searchContact.trim() === '') {
+                return this.contacts;
+            }
+            // con questa condizione restituisco il contatto che sto cercando
+            return this.contacts.filter(contact =>
+                // utilizzato il toLowerCase per convertire i caratteri in minuscolo 
+                contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+            );
+        }
 
     },
 }).mount('#app');

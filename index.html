@@ -45,14 +45,16 @@
                     <!-- barra di navigazione per chat e contatti -->
                     <div class="contatti-ricerca">
                         <i class="fa-solid fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <!-- direttiva v-model collegare la variabile di filtraggio della ricerca dei contatti -->
+                        <input type="text" v-model="searchContact" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- lista di tutti i contatti -->
                     <div class="lista-contatti">
                         <ul>
                             <!-- Utilizzo la direttiva v-for per visualizzare in maniera dinamica la lista dei contatti -->
                              <!-- Al click mostro il contatto attivo -->
-                            <li v-for="(contact, index) in contacts" :key="index" @click="select(index)">
+                              <!-- metodo filter contact visualizzo dinamicamente tutta la lista dei contatti e la posso filtrare -->
+                            <li v-for="(contact, index) in filterContact()" :key="index" @click="select(index)">
                                 <img class="immagini-contatti" :src="contact.avatar" :alt="contact.name">                              
                                 <div class="contenuto-contatti">
                                     <div class="testo">

@@ -29,7 +29,9 @@ In allegato trovate il pdf con il brief del progetto che abbiamo letto in classe
 
 1 - definire una variabile per effettuare la ricerca degli utenti ok
 2 - definire una funzione per filtrare i contatti ok
-3 - direttiva v-model nel dom per legare il valore dell'input di filtaggio con la variabile
+ 2.1 - se la stringa e vuota mostro tutta la lista dei contatti
+ 2.2 - se inserisco un carattere restituisco il contatto che sto cercando
+3 - direttiva v-model nel dom per legare il valore dell'input di filtaggio con la variabile ok
 
 
 
