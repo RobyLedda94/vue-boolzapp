@@ -186,6 +186,7 @@ createApp({
 
             selectedContact: 0, // variabile che traccia il contatto attivo
             newMessage: '', // variabile che tiene traccia dei nuovi messaggi
+            searchContact : '', // variabile per tracciare i contatti che cerchiamo
         };
     },
     methods: {
@@ -218,6 +219,13 @@ createApp({
                 });
 
             }, 1000); // 1 secondo rappresentato in millesecondi
+        },
+
+        // metodo per filtrare i contatti
+        filterContact() {
+                return this.contacts.filter(contact => {
+                contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+            });
         }
 
     },
