@@ -223,10 +223,10 @@ createApp({
 
         // metodo per filtrare i contatti
         filterContact() {
-                return this.contacts.filter(contact => {
-                contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
-            });
-        }
+            return this.contacts.filter(contact => {
+            contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+        });
+    }
 
     },
 }).mount('#app');
